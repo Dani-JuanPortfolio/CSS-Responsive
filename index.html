@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body class="body">
+  <div class="header">
+    <p class="headertext">NICE TITLE IN WhITE</p>
+  </div>
+  <div class="div1">
+    <div class="subtitle1">URL:</div>
+    <!--<div class="firstbox">
+      <p  class="firstboxtext" >ENTER TARGET HERE</p>-->
+      <input type="text" id="url" placeholder="ENTER TARGET HERE" class="firstbox">
+    <!--</div>-->
+    <div class="subtitle2">OPTIONS:</div>
+    <!-- <div class="secondbox">
+      <p class="secondboxtext">REQUESTS PER SECOND</p>
+    </div> -->
+    <input type="number" id="requests" placeholder="REQUESTS PER SECOND" class="secondbox">
+    <!-- <div class="thirdbox">
+      <p class="thirdboxtext">APPEND MESSAGE</p>
+    </div> -->
+    <input type="text" id="message" placeholder="APPEND MESSAGE" class="thirdbox">
+  </div>
+  <div class="bigsubtitle">attack status</div>
+  <div class="div2">
+    <div class="requesteddiv">REQUESTED:</div>
+    <div class="succeededdiv">SUCCEEDED:</div>
+    <div class="faileddiv">FAILED:</div>
+    </div>
+  <button onclick="myFunction(document.getElementById('url').value,document.getElementById('requests').value,document.getElementById('message').value)" class="button">RED BUTTON</button>
+</body>
+<script>
+  var  enviados=0, correctos=0, errores=0, estado=false;
+
+  function myFunction(url,requests,message){
+    
+    if(url.length==0){
+     alert("Ingrese la URL correcta"); 
+    }
+    if(requests == ''){
+      requests = 10; 
+    }
+    console.log(requests)
+    console.log(message)
+  }
+</script>
+</html>
